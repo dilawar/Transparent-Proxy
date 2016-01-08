@@ -48,8 +48,8 @@ redsocks {
 redsocks {
  local_ip = 127.0.0.1;
  local_port = 5124;
-ip = 10.201.13.50;
- port = 80;
+ip = 172.16.223.223;
+ port = 3128;
 type = http-connect;
 }" > $HOME/.redsocks.conf
 }

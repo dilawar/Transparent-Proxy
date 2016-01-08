@@ -1,4 +1,6 @@
 #!/bin/bash
+set -e 
+set -x
 if [ -f /sbin/iptables ];
 then 
   IPTABLES="/sbin/iptables"
