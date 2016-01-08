@@ -19,11 +19,6 @@ if [ $? -eq 0 ]
 fi
 clear
 echo -e "Configuring redscoks.conf file..n"
-echo -e "|- Please enter your credentials when prompted"
-read -p "\n  + Enter LDAP username:" username
-stty -echo
-read -p "\n  + Enter LDAP Password:" pass
-stty echo
 redsocks_conf_set(){
 touch redsocks.conf
 
@@ -44,13 +39,11 @@ redsocks {
  local_ip = 127.0.0.1;
  local_port = 5123;
 // 'ip' and 'port' are IP and tcp-port of proxy-server
-// This is the ip of netmon.iitb.ac.in
- ip = 10.201.13.50;
- port = 80;
+// This is the ip of proxy.ncbs.res.in
+ ip = 172.16.223.223;
+ port = 3128;
 // known types: socks4, socks5, http-connect, http-relay
  type = http-relay;
-login = \"$username\";
- password = \"$pass\";
 }
 redsocks {
  local_ip = 127.0.0.1;
@@ -58,8 +51,6 @@ redsocks {
 ip = 10.201.13.50;
  port = 80;
 type = http-connect;
-login = \"$username\";
- password = \"$pass\";
 }" > $HOME/.redsocks.conf
 }
 
