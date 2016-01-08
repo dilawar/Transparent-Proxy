@@ -14,8 +14,8 @@ REDSOCKS_DIR="/usr/local/sbin"
 REDSOCKS="$REDSOCKS_DIR/redsocks"
 
 REDSOCKS_PORT="5124"
-SOCKS_HOST="10.201.13.50"
-SOCKS_PORT="80"
+SOCKS_HOST="172.16.233.233"
+SOCKS_PORT="3128"
 
 # start redsocks
 if [ "$USER" != "root" ]; then 
